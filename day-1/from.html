@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Froms in HTML</title>
+</head>
+<body>
+    <form action="process-from.html" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" value="30" />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+
+        <label for="comment">Comments</label>
+        <textarea id="comment" name="comment"></textarea>
+
+        <label for="cities">City</label>
+        <select id="cities" name="cities">
+            <option value="ny">New York</option>
+            <option value="la">Los Angeles</option>
+            <option value="sf" selected="selected">San Francisco</option>
+            <option value="dt">Detroit</option>
+        </select>
+
+        <!-- checkbox gives multiple selection option -->
+        <label><input type="checkbox" name="courses" value="web development" />Web development</label>
+        <label><input type="checkbox" name="courses" value="piano" />Piano classes</label>
+        <label><input type="checkbox" name="courses" value="tennis" />Tennis</label>
+
+        <!-- radio buttons are single selection -->
+        <label><input type="radio" name="courses" value="web development" />Web development</label>
+        <label><input type="radio" name="courses" value="piano" />Piano classes</label>
+        <label><input type="radio" name="courses" value="tennis" />Tennis</label>
+
+        <input type="submit" value="Sign me up" />
+        <input type="reset" value="Reset the form" />
+    </form>
+</body>
+</html>

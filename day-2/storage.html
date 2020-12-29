@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local and session storage</title>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        console.log( sessionStorage );
+        console.log( localStorage );
+
+        localStorage.setItem( 'name', 'Sashi' );
+        localStorage.setItem( 'name2', 'Satya' );
+        localStorage.setItem( 'name3', 'Prashanth' );
+
+        var name2 = localStorage.getItem( 'name2' );
+        console.log( name2 ); // logs "Satya"
+
+        //localStorage.removeItem() removes a key-value pair
+
+        sessionStorage.setItem( 'name', 'Karthik' );
+    </script>
+    
+</body>
+</html>

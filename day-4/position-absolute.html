@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abs {
+            position: absolute;
+            top: 0;
+            border: 1px solid crimson;
+            width: 100%;
+            height: 100px;
+        }
+
+        .dialog {
+            /* position: relative; */
+            position: fixed;
+            top: 30px;
+            left: 50%;
+            margin-left: -200px;
+            height: 300px;
+            padding: 10px;
+            border: 2px solid crimson;
+            background-color: white;
+        }
+
+        .dialog-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+    </div>
+    <div>
+        Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci porta dapibus.
+    </div>
+    <div>
+        Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</div>
+    <div style="position: relative;">
+        Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <div class="abs"></div>
+    </div>
+    
+    <br/><br/><br/><br/><br/><br/>
+    
+    <div class="dialog">
+        <span class="dialog-close">times</span>
+        Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+</body>
+</html>

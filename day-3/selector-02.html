@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* selects a paragraph that is a first child of itsparent */
+        p:first-child{
+            color:red;
+        }
+        p::first-letter{
+            font-size: 2em;
+        }
+        .highlighted-first-line::first-line {
+            color: blue;
+        }
+        input:focus {
+            background-color: azure;
+            /* outline: 5px solid blue; */
+        }
+    </style>
+</head>
+<body>
+    <!-- :first child, :first-letter, :first-line, :focus -->
+    <div>
+        <p>First para within div</p>
+        <p>Second para within div</p>
+        <p>Third para within div</p>
+        <p>Fourth and last child para within div</p>
+    </div>
+
+    <div class="highlighted-first-line">
+        Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Donec sollicitudin molestie malesuada. Sed porttitor lectus nibh. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+    </div>
+    <hr/>
+    Name: <input type="text" name="first-name" />
+    <br/>
+    Age: <input type="age" name="age" />
+</body>
+</html>

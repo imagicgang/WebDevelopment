@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector in CSS</title>
+    <style>
+        /* selects element that has a particulr attribute set to a fixed value */
+        a[target=_blank] {
+            color: crimson;
+            text-decoration: none;
+        }
+
+        /* selects based on existent of a attribute (value does not matter) */
+        a[target] {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        CSS selectors
+        id, class, tag (already covered in module 1)
+        combination of selectors
+        attribute
+        pseudo classes - :first child, :first-letter, :first-line, :focus
+    -->
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+    <a href="https://medium.com/">Medium</a>
+    <a href="https://twitter.com/" target="_blank">Twitter</a>
+
+    <a href="https://www.edureka.co/" target="my-iframe">Edureka Home page</a>
+    <iframe src="" name="my-iframe" >
+</body>
+</html>

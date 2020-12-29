@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 input types and attribute</title>
+</head>
+<body>
+    <!--
+        HTML5 input types
+        number, email, url, tel, range, color, date, datetime, search
+        attributes: placeholder, requirement, autocomplete="off/on" , autofocus, min, max,
+        formnovalidate (on submit button)
+        file upload, multiple attribute and enctype attribute of from (not HTML)
+    -->
+    
+    <form enctype="multipart/form-data" method="post">
+        Quantity: <input type="number" min="1" max="10" step="0.5" name="quantity" />
+        <br/>
+        Your email (text): <input type="text" placeholder="Your email" name="email" required />
+        <br/>
+        Your email (email): <input type="email" autocomplete="on" />
+        <br/>
+        Your home page: <input type="url" />
+        <br/>
+        Telephone number: <input type="tel" autofocus />
+        <br/>
+        Rating for course: <input type="range" min="1" max="5" />
+        <br/>
+        Start date of journey: <input type="date" />
+        <br/>
+        Search the site: <input type="search" />
+
+        <input type="file" name="profile" multiple />
+
+        <input type="submit" value="Submit the form" />
+        <input type="submit" value="Submit the form (without validation)" formnovalidate />
+    </form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolving conflicts in style</title>
+    <!-- external and embedded style sheets have equal importance -->
+    <link rel="stylesheet" href="style-conflict-01.css">
+</head>
+<body>
+    <!--
+         <p style="color: palegreen;">Some paragraph</p>
+    -->
+    <!-- inline style tag is very specific - it targets exactly one element -->
+    <!-- due to the nature of inline styles, they always win in case of property conflicts -->
+
+    <p id="para-1">Some paragraph</p>
+
+    <style>
+        /* the element selector, in this case 'p' is not very specific - it
+        targets anyparagraph */
+        #para-1 {
+            color: red;
+            font-size: 2em;
+        }
+
+        p { /* last CSS rule wins to resolve conflicts (whenthe selector is the same) */
+            color: blue;
+        }
+
+        /*
+            (a, b, c, d)
+            a => 0/1-1 for inline styles
+            b => number of ids in the selector
+            c => number of classes in the selector
+            d => number of tags mentioned in the selector
+            (0, 1, 0, 1)
+        */
+        p#para-1 {
+            color: gray;
+        }
+
+        /*
+            specificity value for a selector
+            (a, b, c, d)
+        */
+
+        /* !important modifier for a property */
+    </style>
+    <!-- external and embedded style sheets have equal importance -->
+    <link rel="stylesheet" href="style-conflict-01.css">
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists in HTML</title>
+    <style>
+        ul {
+            list-style-type: circle; /* it can also take the value "none" */
+        }
+        ol {
+            list-style-type: lower-alpha;
+        }
+        ol > li:nth-child(odd) {
+            color:crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ordered and unordered lists in HTML</h1>
+    <ul> <!-- unordered list -->
+        <li>Apples</li> <!-- list item -->
+        <li>Oranges</li>
+        <li>Bananas</li>
+    </ul>
+    <ul> <!-- unordered list -->
+        <li>Apples</li> <!-- list item -->
+        <li>Oranges</li>
+        <li>Bananas</li>
+    </ul>
+    <ol>
+        <li>Jan 1 - New Year</li>
+        <li>April 8 - Good Friday</li>
+        <li>May 1 - Labout Day</li>
+        <li>Dec 25 - Christmas</li>
+    </ol>
+</body>
+</html>

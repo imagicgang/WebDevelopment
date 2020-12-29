@@ -1,0 +1,22 @@
+/*
+    External CSS files are preferable to embedded CSS
+    External CSS files can be reused across multiple pages
+*/
+a {
+    color: darkgrey;
+}
+a:visited {
+    color: burlywood;
+    font-size: 1.5em;
+}
+a:hover {
+    color: yellowgreen;
+    font-size: 2em;
+}
+a:active {
+    color: rebeccapurple;
+    font-size: 3em;
+}
+#tag-2 {
+    text-decoration: none;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <style>
+        /* give all span-descendants of divs a color of red */
+        /* ancestor descendant selector, and the space is know as the
+        ncestor-descendent combinator */
+        div span {
+            color: red;
+        }
+
+        /* parent child combinator - '>' */
+        div > span {
+            font-size: 2em;
+        }
+
+        div.secondary-content > p > span {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>Span directly within div (child of a div)</span>
+        <p>Para 1</p>
+        <p>Para 2</p>
+        <p>
+            Para 3
+            <span>Span 1 in para 3</span>
+            <span>Span 2 in para 3</span>
+            <span>Span 3 in para 3</span>
+        </p>
+        <p>Para 4</p>
+    </div>
+
+    <div class="secondary-content">
+        <p>Para 1</p>
+        <p>Para 2</p>
+        <p>
+            <span>Span 1 in para 3</span>
+            <span>Span 2 in para 3</span>
+            <span>Span 3 in para 3</span>
+        </p>
+        <p>Para 4</p>
+    </div>
+
+    <p>Para outside of div</p>
+
+    <span>Span outside of the div</span>
+</body>
+</html>
