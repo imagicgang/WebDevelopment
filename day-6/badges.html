@@ -14,7 +14,12 @@
 </head>
 <body>
     
-    <button class="btn btn-danger">Mails <span class="badge">12</span></button>
+    <button class="btn btn-danger">Mails <span class="badge" id="mail-badge">12</span></button>
 
+    <script>
+        setTimeout(function() {
+            document.getElementById('mail-badge').innerHTML = 23;
+        }, 3000);
+    </script>
 </body>
 </html>
