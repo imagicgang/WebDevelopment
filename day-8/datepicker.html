@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="bootstrap/jquery-ui/themes/overcast/theme.css">
+</head>
+<body>
+    Start date: <input type="text" id="start-date" />
+
+    <script src="bootstrap/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap/jquery-ui/jquery-ui.min.js"></script>
+
+    <script>
+        function isInvalid() {
+            return true;
+        }
+
+        $(document).ready(function() {
+            var date = new Date();
+            date.setDate( date.getDate() + 1 );
+            $('#start-date').datepicker({
+                //minDate: date, // give a number (say 0) or a date object or a string in a particular format
+                minDate: '17-08-11',
+                maxDate: 180,
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: 'D, dd-M-yy',
+                onSelect: function( selectedDate, obj ) {
+                    console.log( 'date selected', selectedDate );
+                    if (isInvalid(selectedDate)) {
+                        setTimeout( function() {
+                            $('#start-date').val('');
+                        },0);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

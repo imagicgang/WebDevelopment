@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .message {
+            padding: 10px 10px;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .message-success {
+            border-color: green;
+            background-color: olivedrab;
+        }
+
+        .message-danger {
+            border-color: crimson;
+            background-color: lightpink;
+        }
+
+        .yellow-bg {
+            background-color: yellow;
+        }
+
+        .olive-bg {
+            background-color: olive;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        - Event handling
+        - The ready event and handling it
+        - Mourse events: clicks, dbclick, mouseenter, mouseleave, mousedown
+        - Input element events: focus, blur
+     -->
+
+    <div class="message message-success">Message 1</div>
+    <div class="message message-danger">Message 2</div>
+
+    Name: <input type="text" />
+    Phone:<input type="tel" />
+
+    <script src="bootstrap/jquery-3.5.1.min.js"></script> 
+
+    <script>
+        $(document).ready(function() {
+            /* $('.message').on('click', function() {
+                console.log( $(this).html() );
+            }); */
+
+            /* $('.message').click(function($event) { // click shortcut method
+                console.log( 'Click: ', $(this).html() );
+                console.log($event);
+            });
+
+            $('.message').dblclick(function($event) { // dbclick shortcut method
+                console.log( 'Dbclick: ', $(this).html() );
+                console.log($event);
+            }); */
+
+            // multi-event handler setup syntex
+            $('.message').on({
+                click: function($event) { // click shortcut method
+                    console.log( 'Click :', $(this).html() );
+                    console.log($event);
+                },
+                dbclick: function($event) { // dbclick shortcut method
+                    console.log( 'Dbclick :', $(this).html() );
+                    console.log($event);
+                },      
+                mouseenter: function() {
+                    console.log( 'Mouseenter :', $(this).html() );
+                }
+            });
+
+            $('input').on({
+                focus: function() {
+                    $(this).addClass( 'yellow-bg' ).removeClass( 'olive-bg' );
+                },
+                blur: function() {
+                    $(this).removeClass( 'yellow-bg' ).addClass( 'olive-bg' );
+                }
+            });
+        });
+    </script>
+</body>
+</html>

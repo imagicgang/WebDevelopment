@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .panel {
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .panel-heading, .panel-body {
+            padding: 10px 20px;
+        }
+
+        .panel-success {
+            border-color: green;
+        }
+
+        .panel-success, .panel-heading {
+            background-color: olivedrab;
+        }
+
+        .panel-danger {
+            border-color: crimson; 
+        }
+
+        .panel-danger, .panel-heading {
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        - Hiding and showing elements
+        - hide(), show(), and toggle()
+        - fadeIn(), fadeOut(), fadeToggle()
+        - slideup(), slideDown() and slideToggle()
+     -->
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            Message 1
+        </div>
+        <div class="panel-body">
+            You have been subscribed to our newsletter
+        </div>
+    </div>
+
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            Message 2
+        </div>
+        <div class="panel-body">
+            You have been subscribed to our newsletter
+        </div>
+    </div>
+
+    <script src="bootstrap/jquery-3.5.1.min.js"></script> 
+
+    <script>
+        $(document).ready(function() {
+            $('.panel-heading').click(function() {
+                //$(this).closest('.panel').find('.panel-body').fadeToggle();
+                $(this).closest('.panel').find('.panel-body').slideToggle(150);
+            });
+        });
+    </script>
+</body>
+</html>
