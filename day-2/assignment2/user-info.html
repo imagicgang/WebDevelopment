@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <h1>User Infomation</h1>
+    
+    <hr/>
+    
+    <form>
+        First Name: <input type="text" name="first-name" id="first-name" />
+        <br/>
+        Last Name: <input type="text" name="last-name" id="last-name" />
+        <br/>
+        Address: <input type="text" name="address" />
+        <br/>
+        E-mail: <input type="email" autocomplete="on" name="email" />
+        <br/>
+        Date of birth: <input type="date" id="date" />
+    </form>
+    
+    <hr/>
+    
+    <audio controls loop autoplay>
+        <source src="auds/horse.mp3" type="audio/mp3" /> 
+        <source src="auds/horse.ogg" type="audio/ogg" />
+    </audio>
+    
+    <hr/>
+    
+    <video controls loop autoplay>
+        <source src="vids/demo.mp4" type="video/mp4" /> 
+        <source src="vids/demo.webm" type="video/webm" />
+    </video>
+    
+    <hr/>
+    
+    <svg id="circle" height="">
+        <circle id="circle-1" cx="50" cy="100" r="50" fill="blue" />
+        <circle id="circle-2" cx="180" cy="100" r="50" fill="red" />
+    </svg>
+    
+    <script>
+        console.log( sessionStorage );
+        console.log( localStorage );
+
+        localStorage.setItem( 'firstname', '#first-name' );
+        localStorage.setItem( 'lastname', '#last-name' );
+        localStorage.setItem( 'date', '#date' );
+
+        document.getElementById("result").innerHTML = localStorage.getItem("firstname");
+        document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+        document.getElementById("result").innerHTML = localStorage.getItem("date");
+    </script>
+    
+</body>
+</html>
