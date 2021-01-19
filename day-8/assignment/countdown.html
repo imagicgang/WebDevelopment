@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="jquery.countdown.package-2.1.0/css/jquery.countdown.css">
+    <script type="text/javascript" src="jquery.countdown.package-2.1.0/js/jquery.plugin.js"></script>
+    <script type="text/javascript" src="jquery.countdown.package-2.1.0/js/jquery.countdown.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="countdown"></div>
+    </div>
+
+    <script> // countdown to Jan 1, 2022
+        $('.countdown').countdown({
+            until: new Date(2022, 1, 1), 
+            padZeroes: true
+        });
+    </script>
+</body>
+
+</html>

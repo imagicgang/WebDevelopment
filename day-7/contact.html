@@ -12,6 +12,10 @@
         body {
             margin-top: 50px;
         }
+
+        #map-container {
+            height: 300px;
+        }
     </style>
 </head>
 
@@ -55,6 +59,11 @@
             </div>
         </div>
     </nav>
+
+    <div class="container">
+        <h2>We are here</h2>
+        <div id="map-container"></div>
+    </div>
 
     <div class="wel">
         <style>
@@ -125,6 +134,17 @@
     </footer>
     <script src="bootstrap/jquery-3.5.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js"></script>
+    <script>
+        window.onload = function() {
+            var location = new google.maps.LatLng(51.481663,-0.1931452);
+
+            var map = new google.maps.Map(document.getElementById('map-container'), {
+                center: location,
+                zoom: 17
+            });
+        };
+    </script>
 </body>
 
 </html>
